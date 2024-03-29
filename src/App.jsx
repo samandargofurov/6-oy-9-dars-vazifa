@@ -1,11 +1,15 @@
 import './App.css'
+import React, { useEffect } from 'react'
 import Hero from './components/Hero/hero'
 import Navbar from './components/Navbar/navbar'
 import Products from './components/Products/products'
-import AOS from "aos"
+import TopProducts from './components/TopProducts/TopProducts'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-  React.useEffect(() => {
+
+  useEffect(() => {
     AOS.init({
       offset: 100,
       duration: 800,
@@ -19,6 +23,7 @@ function App() {
       <Navbar />
       <Hero></Hero>
       <Products />
+      <TopProducts />
     </>
   )
 }
